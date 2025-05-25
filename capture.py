@@ -3,11 +3,13 @@ import time
 from send_email import send_email
 CAMERA_INDEX = 0  # Default camera index
 # Function to capture a photo from the webcam
-sender_email = "yashseth391@gmail.com"  # Replace with your email
-sender_password = "snsj dqqw qtdu oilc"  # Replace with your email password
-recipient_email = "yashseth391@gmail.com"  # Replace with the recipient's email
-subject = "Unauthorized Access Detected"  # Subject of the email
-body = "An unauthorized access attempt was detected. See the attached photo."  # Body of the email
+sender_email = "sarandeepsingh9596@gmail.com"
+sender_password = "vceh lcvv sipf okfr"
+recipient_email = "sarandeepsingh9596@gmail.com"
+subject = "Unauthorized Access Alert"
+body = "Someone tried to access your computer without permission. A photo has been captured."
+
+
 
 def capture_photo():
     cap = cv2.VideoCapture(CAMERA_INDEX)

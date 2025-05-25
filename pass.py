@@ -12,8 +12,11 @@ from lock import lock_computer
 import imageio
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-PASSWORD = os.environ.get("PASSWORD")
-# Configuration
+PASSWORD =os.getenv("PASSWORD","122")
+
+
+
+# ConfigurationS
 
 FAILED_ATTEMPTS_LIMIT = 3
 INITIAL_MOUSE_CLICKS_ALLOWED = 2  # Number of mouse clicks allowed at the start
@@ -51,7 +54,7 @@ def show_password_prompt():
             if failed_attempts >= FAILED_ATTEMPTS_LIMIT:
                 print("❌ Maximum attempts reached. Locking the computer.")
                 capture_photo()
-                lock_computer()
+                # lock_computer()
                 root.after(0, root.destroy)  # Schedule root.destroy() on the main thread
                 os._exit(0)  # Terminate the program immediately
             else:
